@@ -8,18 +8,15 @@
   </head>
   <body>
     <div class="wrapper">
-      <!-- <video
+      <video
         class="flex"
         width="765"
         height="430"
-        src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4"
+        src="https://joy1.videvo.net/videvo_files/video/free/2019-11/large_watermarked/190301_1_25_11_preview.mp4"
         loop
         controls
-      ></video> -->
-      <video width="765" height="430" controls>
-        <source src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+      ></video>
+
       <div class="speed">
         <div class="speed-bar">1×</div>
       </div>
@@ -32,18 +29,17 @@
 
       function handleMove(e) {
         const y = e.pageY - this.offsetTop;
-        const percent =y/this.offsetHeight;
+        const percent = y / this.offsetHeight;
         const min = 0.4;
         const max = 4;
-        const height = Math.round(percent*100) + "%";
+        const height = Math.round(percent * 100) + "%";
         const playbackRate = percent * (max - min) + min;
         bar.style.height = height;
         bar.textContent = playbackRate.toFixed(2) + "x";
-        video.playbackRate = playbackRate
+        video.playbackRate = playbackRate;
       }
 
       speed.addEventListener("mousemove", handleMove);
-
     </script>
   </body>
 </html>
